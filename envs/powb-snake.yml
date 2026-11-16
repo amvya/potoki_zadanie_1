@@ -1,3 +1,8 @@
+# Workflow environment: the workflow manager itself.
+# Activate it to run the pipeline with: conda env create -f envs/powb-snake.yml
+#Snakemake then creates the other two environments (powb-blast, powb-python)
+#automatically with --use-conda.
+
 name: powb-snake
 channels:
   - conda-forge
