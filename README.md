@@ -3,6 +3,7 @@
 Potok [Snakemake](https://snakemake.readthedocs.io/) typizujący genomy gronkowców metodą MLST (*Multilocus Sequence Typing*) i budujący na tej podstawie drzewo filogenetyczne metodą łączenia sąsiadów (*neighbour-joining*, NJ).
 
 > Projekt wykonany w ramach przedmiotu *Potoki obliczeniowe w Bioinformatyce*, 2026/27.
+
 > Autorzy: Agata Zając, Karina Dal, Hanna Milnikel
 
 ## Spis treści
@@ -53,7 +54,7 @@ blastn → filter → merge_flt → mlst → merge_mlst → unique → tree
 │   ├── alleles.fna        #   baza alleli MLST (FASTA)
 │   └── bigsdb.tsv         #   schemat MLST: profile alleli i odpowiadające im ST
 ├── genomesdir/            # genomy do analizy: {asmid}.fna.gz (nazwa katalogu = klucz genomesdir w config.yml)
-├── output/                # wyniki (tworzone przez potok, ignorowane przez git)
+├── output/                # wyniki (tworzone przez potok)
 ├── log/                   # logi poszczególnych reguł (ignorowane przez git)
 ├── .gitignore
 └── README.md
@@ -130,7 +131,7 @@ snakemake --use-conda --cores 4
 snakemake --dag | dot -Tpng > dag.png
 ```
 
-Skrypty z katalogu `scripts/` są wywoływane bezpośrednio, więc muszą mieć uprawnienie do wykonywania (`chmod +x scripts/*.py`) i nagłówek `#!/usr/bin/env python`.
+Skrypty z katalogu `scripts/` są wywoływane bezpośrednio, więc muszą mieć uprawnienie do wykonywania (`chmod u+x scripts/*.py`) i nagłówek `#!/usr/bin/env python`.
 
 ## Wyniki
 
