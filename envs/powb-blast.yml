@@ -1,7 +1,9 @@
+# Environment of the rule `blastn`: sequence similarity search.
 name: powb-blast
 channels:
   - conda-forge
   - bioconda
 dependencies:
+  # NCBI BLAST+ (blastn: nucleotide-nucleotide search)
   - blast=2.17.*
 
