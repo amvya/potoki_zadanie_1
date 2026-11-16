@@ -2,8 +2,8 @@
 
 Potok [Snakemake](https://snakemake.readthedocs.io/) typizujący genomy gronkowców metodą MLST (*Multilocus Sequence Typing*) i budujący na tej podstawie drzewo filogenetyczne metodą łączenia sąsiadów (*neighbour-joining*, NJ).
 
-> Projekt wykonany w ramach przedmiotu `<nazwa przedmiotu>`, `<rok akademicki>`.
-> Autor: `<imię i nazwisko>`
+> Projekt wykonany w ramach przedmiotu *Potoki obliczeniowe w Bioinformatyce*, 2026/27.
+> Autorzy: Agata Zając, Karina Dal, Hanna Milnikel
 
 ## Spis treści
 
