@@ -2,10 +2,6 @@
 # Internal Snakemake state, locks and conda environments
 .snakemake/
 
-# --- Workflow results (reproducible by re-running the workflow) ---
-output/
-log/
-
 # --- Large input data: genome assemblies ---
 # Adjust to the `genomesdir` value from config.yml
 input
