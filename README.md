@@ -203,10 +203,5 @@ Drzewo filogenetyczne wygenerowane przez potok przedstawia podobieństwo pomięd
 
 Na podstawie uzyskanych wyników można stwierdzić, że opracowany potok prawidłowo identyfikuje typy sekwencyjne obecne w porównywanym zbiorze danych i umożliwia analizę podobieństwa pomiędzy profilami allelicznymi. Uzyskane drzewo stanowi dodatkową wizualizację zależności pomiędzy zidentyfikowanymi typami ST.
 
-![Drzewo filogenetyczne typów sekwencyjnych Staphylococcus aureus wraz z histogramem liczby przypisanych genomów](output/tree.png)
-
-*Rysunek 1. Drzewo filogenetyczne typów sekwencyjnych Staphylococcus aureus skonstruowane metodą Neighbour-Joining. Histogram przedstawia liczbę genomów przypisanych do poszczególnych typów sekwencyjnych.*
-
-
 
 
