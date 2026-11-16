@@ -52,6 +52,7 @@ blastn → filter → merge_flt → mlst → merge_mlst → unique → tree
 │   ├── queries/           #   sekwencje zapytań: {seqid}.fna (po jednym locus)
 │   ├── alleles.fna        #   baza alleli MLST (FASTA)
 │   └── bigsdb.tsv         #   schemat MLST: profile alleli i odpowiadające im ST
+├── genomesdir/            # genomy do analizy: {asmid}.fna.gz (nazwa katalogu = klucz genomesdir w config.yml)
 ├── output/                # wyniki (tworzone przez potok, ignorowane przez git)
 ├── log/                   # logi poszczególnych reguł (ignorowane przez git)
 ├── .gitignore
@@ -94,7 +95,7 @@ Plik `config.yml` zawiera parametry potoku. Wykorzystywany jest klucz:
 
 | Klucz       | Opis                                               | Przykład            |
 |-------------|----------------------------------------------------|---------------------|
-| `genomesdir`| ścieżka do katalogu z plikami `{asmid}.fna.gz`     | `input/genomes`     |
+| `genomesdir`| ścieżka do katalogu z plikami `{asmid}.fna.gz`     | `genomesdir`        |
 
 Pozostałe parametry (próg e-value `0.01`, minimalne pokrycie zapytania `100`%) są zapisane w sekcji `params` odpowiednich reguł w `Snakefile`.
 
