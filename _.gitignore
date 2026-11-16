@@ -9,6 +9,7 @@ log/
 # --- Large input data: genome assemblies ---
 # Adjust to the `genomesdir` value from config.yml
 input/genomes/
+Gordon_et_al_2017_raw_assemblies
 *.fna.gz
 
 # --- Python ---
