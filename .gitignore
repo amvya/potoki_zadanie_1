@@ -2,6 +2,9 @@
 # Internal Snakemake state, locks and conda environments
 .snakemake/
 
+#log files
+log/
+
 # --- Large input data: genome assemblies ---
 # Adjust to the `genomesdir` value from config.yml
 input
