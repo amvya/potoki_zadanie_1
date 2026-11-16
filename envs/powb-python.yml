@@ -1,10 +1,16 @@
+# Environment of the Python scripts (rules `filter`, `mlst`, `unique`, `tree`).
+
 name: powb-python
 channels:
   - conda-forge
 dependencies:
   - python=3.15.*
+  # Fast data frame library (reading and processing tabular BLAST/MLST data)
   - polars=2.0.*
+  # Sequence and FASTA file handling, distance matrices and NJ tree construction
   - biopython=1.88.*
+  # Tree drawing and visualisation
   - toytree=3.0.*
+  # Version parsing utilities (dependency used by the libraries/scripts)
   - packaging=26.3.*
 
