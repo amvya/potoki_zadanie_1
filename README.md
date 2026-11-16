@@ -156,3 +156,57 @@ Skrypty z katalogu `scripts/` są wywoływane bezpośrednio, więc muszą mieć 
 | `unique`     | `merge_mlst`                              | `output/unique.fna`                        | Po jednej połączonej sekwencji loci dla każdego ST (FASTA). |
 | `tree`       | `unique`, `merge_mlst`                    | `output/tree.newick`, `output/tree.png`    | Obliczenie drzewa NJ i jego wizualizacja. |
 | `all`        | –                                         | `output/tree.newick`, `output/tree.png`    | Reguła docelowa: definiuje końcowe wyniki potoku. |
+
+## Testowanie potoku
+
+W celu przetestowania opracowanego potoku obliczeniowego przeanalizowano 349 genomów *Staphylococcus aureus*, które stanowiły materiał badawczy w publikacji Gordon et al. (2017).
+
+Analiza obejmuje następujące etapy:
+
+1. Wyszukiwanie w genomach fragmentów siedmiu loci wykorzystywanych w typowaniu MLST: `arcC`, `aroE`, `glpF`, `gmk`, `pta`, `tpi` oraz `yqiL`.
+2. Identyfikację alleli dla poszczególnych loci.
+3. Przypisanie genomom typów sekwencyjnych (*Sequence Types*, ST) na podstawie zidentyfikowanych alleli.
+4. Konstrukcję drzewa filogenetycznego metodą *Neighbour-Joining*.
+
+### Wyniki
+
+W wyniku przeprowadzonej analizy zidentyfikowano 8 typów sekwencyjnych:
+
+- ST-8
+- ST-22
+- ST-30
+- ST-88
+- ST-228
+- ST-772
+- ST-2021
+- ST-2434
+
+Uzyskano również 8 unikalnych sekwencji, które zapisano w pliku `output/unique.fna`. Każdemu z analizowanych genomów przypisano odpowiedni typ sekwencyjny.
+
+### Wyniki wizualizacji
+
+Drzewo filogenetyczne w formacie Newick zapisano w pliku `output/tree.newick`.
+
+Dodatkowo wygenerowano graficzną reprezentację drzewa, połączoną z poziomym histogramem przedstawiającym liczbę genomów przypisanych do poszczególnych typów sekwencyjnych. Wizualizacja znajduje się w pliku `output/tree.png`.
+
+![Drzewo filogenetyczne genomów *Staphylococcus aureus* wraz z histogramem liczby genomów przypisanych do poszczególnych typów sekwencyjnych](output/tree.png)
+
+### Porównanie wyników z publikacją Gordon et al. (2017)
+
+Wyniki uzyskane za pomocą opracowanego potoku obliczeniowego porównano z danymi przedstawionymi w publikacji Gordon et al. (2017). W tabeli 1 przedstawiono charakterystykę 20 ognisk zakażeń *Staphylococcus aureus*, uwzględniając między innymi przypisane im kompleksy klonalne oraz typy sekwencyjne.
+
+W analizowanym zbiorze w wyniku naszej analizy zidentyfikowano 8 typów sekwencyjnych, wszystkie zostały również odnotowane w publikacji Gordon et al. (2017), co wskazuje na zgodność uzyskanych wyników typowania MLST z danymi przedstawionymi przez autorów.
+
+W publikacji najliczniej reprezentowany był typ ST-8, obejmujący dwa ogniska epidemiczne (D i G), w których odnotowano łącznie 204 przypadki. Licznie występowały również ST-22 (58 przypadków), ST-228 (50 przypadków) oraz ST-30 (35 przypadków). Pozostałe zidentyfikowane typy sekwencyjne były reprezentowane przez mniejszą liczbę przypadków.
+
+Drzewo filogenetyczne wygenerowane przez potok przedstawia podobieństwo pomiędzy zidentyfikowanymi typami sekwencyjnymi na podstawie analizowanych loci MLST. Można zaobserwować, że ST-22 i ST-30 tworzą jedną parę siostrzaną, natomiast ST-2434 i ST-772 wykazują bliskie podobieństwo i również grupują się razem. Z kolei ST-8 i ST-2021 tworzą odrębną parę siostrzaną. ST-228 i ST-88 zajmują osobne pozycje w obrębie pozostałej części drzewa.
+
+Na podstawie uzyskanych wyników można stwierdzić, że opracowany potok prawidłowo identyfikuje typy sekwencyjne obecne w porównywanym zbiorze danych i umożliwia analizę podobieństwa pomiędzy profilami allelicznymi. Uzyskane drzewo stanowi dodatkową wizualizację zależności pomiędzy zidentyfikowanymi typami ST.
+
+![Drzewo filogenetyczne typów sekwencyjnych Staphylococcus aureus wraz z histogramem liczby przypisanych genomów](output/tree.png)
+
+*Rysunek 1. Drzewo filogenetyczne typów sekwencyjnych Staphylococcus aureus skonstruowane metodą Neighbour-Joining. Histogram przedstawia liczbę genomów przypisanych do poszczególnych typów sekwencyjnych.*
+
+
+
+
