@@ -14,8 +14,11 @@ Potok [Snakemake](https://snakemake.readthedocs.io/) typizujący genomy gronkowc
 4. [Dane wejściowe](#dane-wejściowe)
 5. [Konfiguracja](#konfiguracja)
 6. [Uruchomienie](#uruchomienie)
-7. [Wyniki](#wyniki)
+7. [Wyniki](#Schemat-plików-wynikowych)
 8. [Opis reguł](#opis-reguł)
+9. [Testowanie Potoku](#testowanie-potoku)
+10. [Wyniki i wizualizacja](#Wyniki-i-wizualizacja)
+11. [Porównanie wyników z literaturą](#Porównanie-wyników-z-literaturą)
 
 ## Opis działania
 
@@ -133,7 +136,7 @@ snakemake --dag | dot -Tpng > dag.png
 
 Skrypty z katalogu `scripts/` są wywoływane bezpośrednio, więc muszą mieć uprawnienie do wykonywania (`chmod u+x scripts/*.py`) i nagłówek `#!/usr/bin/env python`.
 
-## Wyniki
+## Schemat plików wynikowych
 
 | Plik                                  | Opis                                                          |
 |---------------------------------------|---------------------------------------------------------------|
@@ -168,7 +171,7 @@ Analiza obejmuje następujące etapy:
 3. Przypisanie genomom typów sekwencyjnych (*Sequence Types*, ST) na podstawie zidentyfikowanych alleli.
 4. Konstrukcję drzewa filogenetycznego metodą *Neighbour-Joining*.
 
-### Wyniki
+## Wyniki i wizualizacja
 
 W wyniku przeprowadzonej analizy zidentyfikowano 8 typów sekwencyjnych:
 
@@ -191,7 +194,7 @@ Dodatkowo wygenerowano graficzną reprezentację drzewa, połączoną z poziomym
 
 ![Drzewo filogenetyczne genomów *Staphylococcus aureus* wraz z histogramem liczby genomów przypisanych do poszczególnych typów sekwencyjnych](output/tree.png)
 
-### Porównanie wyników z publikacją Gordon et al. (2017)
+## Porównanie wyników z literaturą
 
 Wyniki uzyskane za pomocą opracowanego potoku obliczeniowego porównano z danymi przedstawionymi w publikacji Gordon et al. (2017). W tabeli 1 przedstawiono charakterystykę 20 ognisk zakażeń *Staphylococcus aureus*, uwzględniając między innymi przypisane im kompleksy klonalne oraz typy sekwencyjne.
 
