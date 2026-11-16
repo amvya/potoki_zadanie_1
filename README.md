@@ -78,16 +78,32 @@ conda activate powb-snake
 
 ## Dane wejściowe
 
+Dane wejściowe nie są częścią repozytorium. Należy je pobrać z serwera `celsius`
+do głównego katalogu projektu. Potrzebne są dwa katalogi:
+
+- `input/` – sekwencje zapytań i schemat MLST,
+- katalog z genomami do analizy, o nazwie zgodnej z kluczem `genomesdir` w `config.yml`.
+
+    scp -r <użytkownik>@celsius:<ścieżka_do_input> input
+    scp -r <użytkownik>@celsius:<ścieżka_do_genomów> genomesdir
+
+Po pobraniu struktura powinna wyglądać następująco:
+
+    input/
+    ├── queries/          # sekwencje zapytań {seqid}.fna
+    ├── alleles.fna       # baza alleli MLST
+    └── bigsdb.tsv        # schemat MLST
+    genomesdir/           # genomy do analizy {asmid}.fna.gz
+
 | Ścieżka                      | Opis                                                                      |
 |------------------------------|---------------------------------------------------------------------------|
 | `input/queries/{seqid}.fna`  | po jednym pliku FASTA na locus MLST (fragment genu, np. `gmk`)            |
-| `<genomesdir>/{asmid}.fna.gz`| asemblacje genomów gronkowców (FASTA skompresowany gzip); `{asmid}` to numer dostępowy asemblacji |
+| `<genomesdir>/{asmid}.fna.gz`| złożenia genomów gronkowców (FASTA skompresowany gzip); `{asmid}` to numer dostępowy asemblacji |
 | `input/alleles.fna`          | baza alleli MLST (FASTA)                                                  |
 | `input/bigsdb.tsv`           | schemat MLST (profile alleli → ST) w formacie tabelarycznym               |
 
 Nazwy zapytań (`{seqid}`) i asemblacji (`{asmid}`) są wykrywane automatycznie na podstawie nazw plików (`glob_wildcards`), więc dodanie nowego genomu lub locus nie wymaga zmian w kodzie.
 
-`<Opisać źródło danych: skąd pobrano genomy, schemat MLST i sekwencje zapytań, np. NCBI / PubMLST>`
 
 ## Konfiguracja
 
