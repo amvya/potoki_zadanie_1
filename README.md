@@ -186,7 +186,7 @@ W wyniku przeprowadzonej analizy zidentyfikowano 8 typów sekwencyjnych:
 
 Uzyskano również 8 unikalnych sekwencji, które zapisano w pliku `output/unique.fna`. Każdemu z analizowanych genomów przypisano odpowiedni typ sekwencyjny.
 
-### Wyniki wizualizacji
+### Wizualizacja wyników
 
 Drzewo filogenetyczne w formacie Newick zapisano w pliku `output/tree.newick`.
 
