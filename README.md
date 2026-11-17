@@ -89,6 +89,7 @@ do głównego katalogu projektu. Potrzebne są dwa katalogi:
 - katalog z genomami do analizy, o nazwie zgodnej z kluczem `genomesdir` w `config.yml`.
 
     scp -r <użytkownik>@celsius:<ścieżka_do_input> input
+  
     scp -r <użytkownik>@celsius:<ścieżka_do_genomów> genomesdir
 
 Po pobraniu struktura powinna wyglądać następująco:
